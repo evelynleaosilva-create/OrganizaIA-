@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f5ff"><title>OrganizaIA — seu espaço de organização</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#inicio"><span class="brand-mark">o</span><span>Organiza<span class="brand-ai">IA</span><small>um passo de cada vez</small></span></a>
+      <nav aria-label="Navegação principal">
+        <button class="nav-btn active" data-view="chat"><span>✦</span> Conversar com a IA</button>
+        <button class="nav-btn" data-view="tasks"><span>▤</span> Meu planejamento</button>
+      </nav>
+      <div class="side-note"><span class="sparkle">✧</span><p>Você não precisa resolver tudo hoje. Vamos descobrir o próximo passo.</p></div>
+      <div class="privacy-note">♡ Seus dados ficam neste dispositivo. Não é necessário criar conta.</div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar"><div><div class="eyebrow">SEU ESPAÇO DE ESTUDOS</div><h1 id="page-title">Oi! Por onde começamos?</h1></div><button id="clear-data" class="text-button" title="Apagar conversas e tarefas deste dispositivo">Limpar meus dados</button></header>
+
+      <section id="chat-view" class="view active">
+        <div class="welcome-card"><div class="welcome-icon">✦</div><div><h2>Sem pressão. Vamos organizar juntos.</h2><p>Conte o que está difícil, o que precisa fazer ou até mesmo se você não sabe por onde começar.</p></div></div>
+        <div id="chat-messages" class="chat-messages" aria-live="polite">
+          <div class="message assistant"><div class="avatar">✦</div><div class="bubble"><p>Oi! Eu sou o OrganizaIA. 💜</p><p>Posso ajudar você a dividir uma tarefa grande em etapas, montar um plano de estudos ou organizar uma semana cheia. O que está passando pela sua cabeça?</p></div></div>
+        </div>
+        <div class="suggestions" id="suggestions"><button class="suggestion">Tenho muita coisa para estudar e não sei por onde começar</button><button class="suggestion">Estou procrastinando uma tarefa</button><button class="suggestion">Quero organizar minha semana</button></div>
+        <form id="chat-form" class="composer"><textarea id="chat-input" rows="2" maxlength="4000" placeholder="Escreva do seu jeito..." aria-label="Sua mensagem"></textarea><button id="send-btn" type="submit" aria-label="Enviar mensagem">↑</button><div class="composer-hint">A IA pode cometer erros. Revise as sugestões e adapte à sua realidade.</div></form>
+      </section>
+
+      <section id="tasks-view" class="view">
+        <div class="planner-intro"><div><h2>Seu planejamento</h2><p>Um lugar só seu para acompanhar o que deseja fazer.</p></div><div class="progress-pill"><strong id="progress-count">0/0</strong><span>concluídas</span></div></div>
+        <div class="progress-track"><div id="progress-bar"></div></div>
+        <form id="task-form" class="task-form"><input id="task-input" maxlength="180" placeholder="Qual é o próximo passo?" aria-label="Nova tarefa" required><button type="submit">+ Adicionar</button></form>
+        <div class="task-list" id="task-list"></div>
+        <div class="empty-state" id="empty-state"><div>✧</div><h3>Seu espaço está livre por enquanto</h3><p>Adicione uma tarefa aqui ou converse com a IA para pensar no primeiro passo.</p><button class="secondary-btn" id="go-chat">Conversar com a IA</button></div>
+      </section>
+      <footer>Feito para respeitar seu ritmo. <span>OrganizaIA ©</span></footer>
+    </main>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
