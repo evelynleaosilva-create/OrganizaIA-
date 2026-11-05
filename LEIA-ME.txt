@@ -1,0 +1,27 @@
+ORGANIZAIA — PROTÓTIPO COM CONVERSA DE IA
+
+O QUE JÁ ESTÁ NO PROJETO
+- Conversa com IA usando a API da OpenAI, quando configurada.
+- Planejamento de tarefas: adicionar, concluir e excluir.
+- Botão para transformar uma sugestão da IA em item do planejamento.
+- Dados de tarefas e histórico guardados localmente no navegador do dispositivo.
+- Sem cadastro, login ou perfil público.
+
+IMPORTANTE SOBRE A CONEXÃO COM IA
+A chave da API fica somente no servidor, no arquivo .env. Nunca coloque a chave em public/app.js ou index.html e nunca envie sua chave por mensagem.
+A API é cobrada separadamente do plano ChatGPT. Confira preços e limites antes de usar.
+
+COMO EXECUTAR EM UM COMPUTADOR
+1. Instale Node.js (versão LTS) no computador.
+2. Abra a pasta organizaia no terminal.
+3. Execute: npm install
+4. Copie .env.example para um arquivo chamado .env.
+5. No .env, substitua o texto de OPENAI_API_KEY pela sua chave da API.
+6. Execute: npm start
+7. Abra http://localhost:3000 no navegador.
+
+PARA PUBLICAR NA INTERNET
+Este projeto ainda não está publicado. Para ficar online, será necessário hospedar o site e o servidor em um serviço que permita guardar a variável secreta OPENAI_API_KEY. Não publique a pasta .env nem a chave.
+
+PRIVACIDADE
+O protótipo não pede nome, e-mail ou login. Tarefas e conversas ficam no armazenamento local do navegador do dispositivo. Quem tiver acesso ao mesmo dispositivo/perfil de navegador poderá ver esses dados. O botão “Limpar meus dados” apaga os dados locais deste protótipo. Mensagens enviadas à IA são processadas pela API para gerar respostas; evite compartilhar dados pessoais sensíveis.
